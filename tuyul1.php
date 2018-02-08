@@ -1,4 +1,5 @@
-#Auto Mining BTC  Recoder By ShS93
+#Auto Mining DOGE
+    By ShS93
 #  SEDIKIT BAKAL ADA YANG ERROR :)
 
 <?php
@@ -6,7 +7,7 @@ date_default_timezone_set("Asia/Bangkok");
 error_reporting(0);
 function call($addr) {
     $data= "address=$addr&sponsor=D5VTWST7pBaL3a5Hz8Xhxf4NancoByPS6z";
-    $cok = tempnam('tmp','avo'.rand(1000000,9999999).'tmp.txt');
+    $cok = tempnam('tmp','avo'.(5.5).'tmp.txt');
     $c = curl_init("https://hnp-faucet.me");
     curl_setopt($c, CURLOPT_REFERER, "https://hnp-faucet.me");
     curl_setopt($c, CURLOPT_FOLLOWLOCATION, true);
@@ -79,12 +80,12 @@ function call($addr) {
     return $res;
 }
 $CY="\e[36m"; $GR="\e[2;32m"; $OG="\e[92m"; $WH="\e[37m"; $RD="\e[31m"; $YL="\e[33m"; $BF="\e[34m"; $DF="\e[39m"; $OR="\e[33m"; $PP="\e[35m"; $B="\e[1m"; $CC="\e[0m";
-echo "Wallet BTC : ";
-$btc = trim(fgets(STDIN));
+echo "Wallet DOGE : ";
+$doge = trim(fgets(STDIN));
 //if ($cookies == false) exit($time . "No such file!");
 for($i=0; $i<100; $i++) {
     echo "[" . date("H:i:s") . "] Claim N Wait...\n";
-    $claim = call($btc);
+    $claim = call($doge);
     //print_r($claim);
     //$response = @json_decode($claim, 1);
     if (isset($claim['info'])) {
